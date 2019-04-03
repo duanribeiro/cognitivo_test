@@ -18,7 +18,7 @@
   * user_rating_ver = Avaliação Média da última versão 
   * ver = Última Versão 
   * cont_rating = Classificação Indicativa 
-   prime_genre = Gênero do App  
+  * prime_genre = Gênero do App  
   
  Para isso, é preciso extrair os dados relativos a Aplicações “Apps”, do gênero News.Já para a Aplicação da categoria News, que tiver a maior quantidade de avaliações, utilizar a API dessa Aplicação para identificar quais são as 10 Aplicações do gênero Music e Book que possuem o maior número de citações.
  
