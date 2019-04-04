@@ -12,4 +12,4 @@ WORKDIR /app
 # Copy the current directory contents into the container
 ADD . /app/
 
-#CMD ["./run.sh"]
+CMD ["./run.sh"]

@@ -1,5 +1,5 @@
 from flask import Flask
-import pandas as pd
+from sqlalchemy_utils import database_exists, create_database
 from apis.api import blueprint
 
 def create_app():
@@ -8,6 +8,7 @@ def create_app():
 
     from models.model import db
     db.init_app(app)
+    # db.create_all()
 
 
     app.config.from_object('config.DevelopConfig')
@@ -18,4 +19,4 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", port='5000', debug=True)

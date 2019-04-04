@@ -7,7 +7,7 @@ class DevelopConfig(object):
     pgpass = os.environ.get('PGPASSWORD', 'postgres')
     pghost = os.environ.get('PGHOST', 'db')
     pgport = os.environ.get('PGPORT', '5432')
-    pgdb = os.environ.get('PGDATABASE', 'basic_data')
+    pgdb = os.environ.get('PGDATABASE', 'basic_data_db')
     SQLALCHEMY_DATABASE_URI = f'postgres://{pguser}:{pgpass}@{pghost}:{pgport}/{pgdb}'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
