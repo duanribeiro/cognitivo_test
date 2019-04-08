@@ -4,6 +4,11 @@
 
  Para executar este programa é necessário ter o DOCKER instalado!!
  Após isso digte: docker-compose up
+ 
+ Quando o sistema estiver rodando você pode acessar o endpoint utilizando:<br>
+ * o método POST para salvar no database.
+ * o método GET para ver as informações.
+ 
 ## ENUNCIADO
  Esse é um teste com o objetivo de conhecer melhor seu perfil e sobre a sua forma de trabalhar com problemas envolvendo Desenvolvimento Back End.
 
