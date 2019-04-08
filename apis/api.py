@@ -1,10 +1,12 @@
 from flask import Blueprint, jsonify, request
 import pandas as pd
-from models.model import db, PostProcessing
+import json
+from models.model import db
+from models.model import PostProcessing
 
 blueprint = Blueprint('blueprint', __name__)
 
-@blueprint.route('/', methods=['GET, POST'])
+@blueprint.route('/', methods=['GET', 'POST'])
 def apple_store():
     if request.method == 'POST':
         try:
@@ -24,9 +26,21 @@ def apple_store():
                                              price=row['price'],
                                              prime_genre=row['prime_genre'])
 
-            db.session.insert(post_processing)
+            db.session.add(post_processing)
         db.session.commit()
+        return "Dados inseridos com sucesso", 201
     else:
-        db.session.query
+        result = []
+        query = db.session.query(PostProcessing).all()
+        for idx, item in enumerate(query):
+            result.append({
+                "prime_genre": item.__dict__['prime_genre'],
+                "track_name": item.__dict__['track_name'],
+                "n_citacoes": item.__dict__['n_citacoes'],
+                "size_bytes": item.__dict__['size_bytes'],
+                "price": item.__dict__['price']
 
-    return "Dados inseridos com sucesso", 201
+            })
+
+        return jsonify(result), 200
+

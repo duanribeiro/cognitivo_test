@@ -1,5 +1,10 @@
 # https://www.cognitivo.ai/
 
+## OBSERVAÇÕES DO AUTOR
+
+ Para executar este programa é necessário ter o DOCKER instalado!!
+ Após isso digte: docker-compose up
+## ENUNCIADO
  Esse é um teste com o objetivo de conhecer melhor seu perfil e sobre a sua forma de trabalhar com problemas envolvendo Desenvolvimento Back End.
 
  Uma empresa que fornece aplicativos de música e livros, precisa acompanhar regularmente a evolução das métricas de aplicativos de música disponíveis na Apple Store. Hoje, para que esse acompanhamento seja feito, um profissional precisa diariamente realizar a coleta desses dados atualizados, realizar a transformação desses dados.

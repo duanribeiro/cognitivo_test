@@ -1,6 +1,6 @@
 from flask import Flask
-from sqlalchemy_utils import database_exists, create_database
 from apis.api import blueprint
+# from flask_migrate import Migrate
 
 def create_app():
     app = Flask(__name__)
@@ -8,12 +8,12 @@ def create_app():
 
     from models.model import db
     db.init_app(app)
-    # db.create_all()
-
 
     app.config.from_object('config.DevelopConfig')
 
     app.register_blueprint(blueprint)
+    with app.app_context():
+        db.create_all()
     return app
 
 

@@ -22,13 +22,4 @@ if [[ -z `psql -Atqc "\\list $PGDATABASETEST"` ]]; then
   echo "Database $PGDATABASE created."
 fi
 
-#echo db init
-#python manage.py db init
-#echo db migrate
-#python manage.py db migrate
-#echo db upgrade
-#python manage.py db upgrade
-#
-#python manage.py test
-
 python app.py

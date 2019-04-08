@@ -11,5 +11,7 @@ WORKDIR /app
 
 # Copy the current directory contents into the container
 ADD . /app/
+RUN pip install -r requirements.txt
+RUN cat run.sh
 
 CMD ["./run.sh"]
