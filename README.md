@@ -5,7 +5,7 @@
  Para executar este programa é necessário ter o DOCKER instalado!!
  Após isso digte: docker-compose up
  
- Quando o sistema estiver rodando você pode acessar o endpoint utilizando:<br>
+ Quando o sistema estiver rodando você pode acessar o endpoint (http://0.0.0.0:5000/) utilizando:<br>
  * o método POST para salvar no database.
  * o método GET para ver as informações.
  
